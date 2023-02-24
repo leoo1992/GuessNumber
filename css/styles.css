@@ -1,0 +1,20 @@
+
+
+/* GLOBAL _____________________________________*/
+
+:root{
+    --white: #fafafa ;
+    --dblue: #00348a ;
+    --lblue: #0bbbd6;
+
+
+}
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'ubuntu', sans-serif;
+te
+}
