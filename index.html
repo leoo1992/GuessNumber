@@ -13,6 +13,14 @@
     
     <!---------------CSS-----------> 
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/containers.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/body.css">
+
 
     <!---------------JS-----------> 
     <script src="js/index.js" defer></script>
@@ -23,23 +31,28 @@
         <a href="#"><h1>GuessNumber</h1></a>
     </header>
     <main class="container">
-
-        <form>
-            <label for="kick">Digite um número de 0 a 10 :</label>
-            <input type="number" id="kick" max="10" placeholder="0">
-            <button type="submit">Clique para Jogar</button>
-        </form>
         <section class="result-box" id="result">
             <h2 id="status">Advinhe o numero sorteado !</h2>
             <span id="attempt">
                 Tentativas: 0
             </span>
         </section>
-        <button id="btnstart">Jogar de novo!</button>
-    </main>
+        <form>
+            <label for="kick">Digite um número de 1 a 10 :</label>
+            <input type="number" id="kick" min="1" max="10" placeholder="0">
+            
+        </form>
+        
+        <div>
+            <button type="submit">Clique para Jogar</button>
+        </div>
+        <div>
+            <button id="btnstart">Reset Game</button>
+        </div>
+       </main>
     <footer>
 <p>
-    GuessNumber GAME  |  2023  |  Leonardo Santod Custódio. Todos o s direitos reservados&copy;
+    GuessNumber GAME 2023 | Leonardo Santos Custódio. Todos os direitos reservados &copy;
 </p>
 
     </footer>
