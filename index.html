@@ -13,14 +13,6 @@
     
     <!---------------CSS-----------> 
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/containers.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/form.css">
-    <link rel="stylesheet" href="./css/body.css">
-
 
     <!---------------JS-----------> 
     <script src="js/index.js" defer></script>
@@ -28,27 +20,25 @@
 </head>
 <body>
     <header>
-        <a href="#"><h1>GuessNumber</h1></a>
+        <a><h1>GuessNumber</h1></a>
     </header>
     <main class="container">
         <section class="result-box" id="result">
-            <h2 id="status">Advinhe o numero sorteado !</h2>
+            <h2 id="bar">Advinhe o numero sorteado !</h2>
             <span id="attempt">
                 Tentativas: 0
+                    <button id="btnRestart">Reset Game</button>
             </span>
+
         </section>
         <form>
             <label for="kick">Digite um número de 1 a 10 :</label>
             <input type="number" id="kick" min="1" max="10" placeholder="0">
-            
-        </form>
-        
+        </form> 
         <div>
             <button type="submit">Clique para Jogar</button>
         </div>
-        <div>
-            <button id="btnstart">Reset Game</button>
-        </div>
+
        </main>
     <footer>
 <p>
