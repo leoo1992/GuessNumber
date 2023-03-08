@@ -33,15 +33,13 @@ updateAttempt(attempt, ++Guess.attemptsNumber);
 if(numberDrawn == kick){
     playAgain();
     status.innerHTML = 'Parabéns, vocÊ acertou !';
-    result.style.color ='#fff';
-    status.style.color = '#fff';
     clear();
 } else if(numberDrawn > kick){
     status.innerHTML = 'O numero é maior';
-    status.color='#de4251';
     clear();
 } else if (numberDrawn < kick){ 
     status.innerHTML = 'O numero é menor';
+    clear();
 }
 }
 
