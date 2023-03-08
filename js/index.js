@@ -33,7 +33,6 @@ updateAttempt(attempt, ++Guess.attemptsNumber);
 if(numberDrawn == kick){
     playAgain();
     status.innerHTML = 'Parabéns, vocÊ acertou !';
-    result.style.backgroundColor = '#37c978';
     result.style.color ='#fff';
     status.style.color = '#fff';
     clear();
