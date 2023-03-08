@@ -24,22 +24,16 @@
     </header>
     <main class="container">
         <section class="result-box" id="result">
-            <h2 id="bar">Advinhe o numero sorteado !</h2>
-            <span id="attempt">
-                Tentativas: 0
-                    <button id="btnRestart">Reset Game</button>
-            </span>
-
+            <h2 id="status">Advinhe o número sorteado !</h2>
+            <span id="attempt">Tentativas: 0</span>           
         </section>
         <form>
             <label for="kick">Digite um número de 1 a 10 :</label>
             <input type="number" id="kick" min="1" max="10" placeholder="0">
-        </form> 
-        <div>
             <button type="submit">Clique para Jogar</button>
-        </div>
-
-       </main>
+        </form> 
+        <button id="btnRestart" onclick="restart()">Reset Game</button>
+    </main>
     <footer>
 <p>
     GuessNumber GAME 2023 | Leonardo Santos Custódio. Todos os direitos reservados &copy;

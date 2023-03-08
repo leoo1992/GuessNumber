@@ -1,18 +1,21 @@
 const form  = document.getElementById('form');
 form.addEventListener('submit', handleSubmit);
 
-let bar = document.getElementById('bar');
+let status = document.getElementById('status');
 let attempt = document.getElementById('attempt');
 let result = document.getElementById('result');
 
 const Guess ={
 max:10,
 attemptNumber:0,
-numberDraw:function randomValue (){return Math.round(Math.random*this.max)}
+numberDrawn:function randomValue (){return Math.round(Math.random*this.max)}
 };
 
-let numberDraw = Guess.numberDraw();
-function updateAttempt(attempt,value){attempt.innerHTML = 'Tentativa'+value}
+let numberDrawn = Guess.numberDrawn();
+
+function updateAttempt(attempt,value){
+    attempt.innerHTML = 'Tentativa: ' + value;
+};
 
 function handleSubmit(e) {
 e.preventDefault();
@@ -25,20 +28,20 @@ if (!kick){
 };
 updateAttempt(attempt, ++ Guess.attemptNumber);
 
-if(numberDraw == kick){
+if(numberDrawn == kick){
     playAgain();
-    bar.innerHTML = 'Parabéns, vocÊ acertou !';
+    status.innerHTML = 'Parabéns, vocÊ acertou !';
     result.styles.transition = '0.4s';
     result.styles.backgroundColor = '#37c978';
-    result.styles.color='#fff';
-    bar.styles.color = '#fff';
+    result.styles.color ='#fff';
+    status.styles.color = '#fff';
     clear();
-} else if(numberDraw>kick){
-    bar.innerHTML = 'O numero é maior';
-    bar.color='#de4251';
+} else if(numberDrawn > kick){
+    status.innerHTML = 'O numero é maior';
+    status.color='#de4251';
     clear();
-} else if (numberDraw <kick){ 
-    bar.innerHTML = 'O numero é menor';
+} else if (numberDrawn < kick){ 
+    status.innerHTML = 'O numero é menor';
 
 }
 
