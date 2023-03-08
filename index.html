@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./css/styles.css">
 
     <!---------------JS-----------> 
-    <script src="js/index.js" defer></script>
+    <script src="./js/index.js" defer></script>
  
 </head>
 <body>
@@ -23,15 +23,15 @@
         <a><h1>GuessNumber</h1></a>
     </header>
     <main class="container">
-        <section class="result-box" id="result">
-            <h2 id="status">Advinhe o número sorteado !</h2>
-            <span id="attempt">Tentativas: 0</span>           
-        </section>
-        <form>
+        <form id="form">
             <label for="kick">Digite um número de 1 a 10 :</label>
             <input type="number" id="kick" min="1" max="10" placeholder="0">
             <button type="submit">Clique para Jogar</button>
         </form> 
+        <section class="result-box">
+            <h2 id="status">Advinhe o número sorteado !</h2>
+            <span id="attempt">Tentativas: 0</span>           
+        </section>
         <button id="btnRestart" onclick="restart()">Reset Game</button>
     </main>
     <footer>
