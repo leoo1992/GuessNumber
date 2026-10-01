@@ -9,9 +9,15 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Node 22
+        uses: actions/setup-node@v4
         with:
           node-version: 22
-      - run: node --test tests/quality.test.mjs
-      - run: npx --yes eslint@9 js
+      - name: Tests + coverage 80%
+        run: node --test --experimental-test-coverage --test-coverage-lines=80 tests/quality.test.mjs
+      - name: Lint
+        run: npx --yes eslint@9 js
+      - name: Build
+        run: node --check js/index.js
